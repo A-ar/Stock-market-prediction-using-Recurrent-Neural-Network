@@ -92,11 +92,11 @@ regressor.fit(X_train, y_train, epochs = 100, batch_size = 32)
 
 # Part 3 - Making the predictions and visualising the results
 
-# Getting the real stock price of 2017
+# Getting the real stock price
 dataset_test = forc_data
 real_stock_price = forc_data[:].values
 
-# Getting the predicted stock price of 2017
+# Getting the predicted stock price
 dataset_total = pd.concat((dataset_train, dataset_test), axis = 0)
 inputs = dataset_total[len(dataset_total) - len(dataset_test) - 50:].values
 inputs = inputs.reshape(-1,1)
